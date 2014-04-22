@@ -1,0 +1,121 @@
+html,body,ul,li,ol,dl,dt,dd,form,button,h1,h2,h3,h4,h5,h6,hr,input,textarea,p,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:16px/1.5 Tahoma,Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+address,caption,cite,em,var{font-style:normal;}
+ol,ul{list-style:none;}
+img{display:block;border:0;}
+button,input,select,textarea{font-size:100%;}
+select,input {vertical-align:middle;}
+input::-moz-focus-inner {border:none; padding:0; }
+input[type="text"],input[type="password"],textarea{ outline-style:none; -webkit-appearance:none;}
+table{border-collapse:collapse;border-spacing:0;}
+body{ background-color:#eef0f0; color:#555;}
+
+/*link*/
+a{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover,a:active,a:focus{text-decoration:none;}
+
+/*fonts*/
+@font-face { src:url(../fonts/Microsoft Yahei Font.ttf);}
+
+/*clear*/
+.clearfix:after {content:"."; display:block; height:0; visibility:hidden; clear:both;}
+.clearfix {zoom:1;}
+.clearit {clear:both; height:0; font-size:0; overflow:hidden;}
+
+/*header*/
+.header{ height:42px; line-height:42px; background-color:#45b035; width:100%; font-size:20px; color:#fff; text-align:center; position:relative; text-shadow:0 0 1px #0c6000;}
+.header .return,.header .rigcor{ position:absolute; height:42px; top:0;}
+.header .return{ font-size:18px; width:60px; background:url(../images/m-icon01.png) left center no-repeat; text-indent:12px; left:10px;}
+.header .return:hover,.header .return:active{ cursor:pointer;text-shadow:0 0 10px #0c6000;}
+.header .rigcor{ width:30px; background:url(../images/m-icon02.png) left center no-repeat; right:5px;}
+
+/*mainbox*/
+.mainbox{ width:auto; padding:5px;}
+.mainbox section{ border:1px solid #ccc; border-radius:4px; padding:5px; background-color:#fff; margin-bottom:10px;}
+.theinput li{ height:40px; border-top:1px solid #ddd; padding:10px 10px 0 5px; margin-bottom:10px; position:relative; font-size:16px;}
+.theinput li:first-child{ border-top:0 none;}
+.theinput li input[type=text]{ display:block; height:36px; line-height:36px; color:#008346; border:2px solid #ecf0f1; background-color:#ecf0f1; border-radius:4px; width:100%; margin:0 auto;}
+.theinput li input.tex01{ text-indent:76px;}
+.theinput li input.tex02{ text-indent:110px;}
+.theinput li input.tex03{ text-indent:124px;}
+.theinput li input.tex04{ text-indent:140px;}
+.theinput li input.tex05{ text-indent:205px;}
+.theinput li input.texz5{ text-indent:94px;}
+.theinput li input.texz2{ text-indent:56px;}
+.theinput li input.texz11{ text-indent:192px;}
+.theinput li input:focus{ background-color:#fff; transition:border 0.5s; -moz-transition:border 0.5s; -webkit-transition:border 0.5s; border:2px solid #33a46f;}
+.theinput li select{ height:38px; line-height:38px; width:100%; border:0 none; background-color:#ecf0f1; border-radius:4px; color:#646d68; text-indent:2px;}
+.theinput li h1{ position:absolute; z-index:999; display:block; height:36px; line-height:36px; font-size:16px; top:12px; left:12px; color:#646d68;}
+.theinput li dl{ height:40px; width:100px; line-height:40px; text-align:center; background-color:#848484; border-radius:4px; position:absolute; right:6px; top:10px; color:#fff; font-size:12px; cursor:pointer;}
+.theinput li dl:active{ box-shadow:0 1px 3px #333 inset;}
+.theinput li em{ display:block; width:20px; height:26px; position:absolute; right:12px; top:17px; font-size:10px; color:#fff; line-height:18px; text-align:center;}
+.theinput li em.start{ background:url(../images/m-icon04.png) center center no-repeat;}
+.theinput li em.end{ background:url(../images/m-icon05.png) center center no-repeat;}
+.theinput li em.time{ width:16px; height:17px; background:url(../images/m-icon06.png) center center no-repeat; top:20px;}
+.theinput li em.arrow{ width:13px; height:21px; background:url(../images/m-icon09.png) center center no-repeat; top:20px;}
+.theinput li.switch strong{ display:block; width:50px; height:32px; position:absolute; right:10px; top:14px; border-radius:30px; transition:background-position 0.2s; -moz-transition:background-position 0.2s; -webkit-transition:background-position 0.2s; background:url(../images/m-icon07.png) right center no-repeat #45af35; cursor:pointer;}
+.theinput li.switch strong.on{ background-color:#9f9f9f; transition:background-position 0.2s; -moz-transition:background-position 0.2s; -webkit-transition:background-position 0.2s; background-position:left center;}
+.theinput li.textint{ border:0 none; height:20px; line-height:20px; padding:0; font-size:16px; text-indent:12px;}
+.theinput .inptext{ height:36px; background-color:#ecf0f1; border:2px solid #ecf0f1; border-radius:4px; width:100%; position:relative;}
+.theinput .inptext ol{ height:40px; overflow:hidden; position:absolute; top:-2px;}
+.theinput .inptext ol input{ width:44px; text-align:right;}
+.theinput .inptext ol.sr1{ left:130px; width:48px; text-align:right;}
+.theinput .inptext ol.jt1{ left:130px; width:19px; background:url(../images/m-icon08.png) left center no-repeat;}
+.theinput .inptext ol.fh1{ left:178px; line-height:42px; width:40px;}
+.theinput .inptext ol.sr2{ left:216px; width:50px; text-align:right;}
+.theinput .inptext ol.jt2{ left:217px; width:19px; background:url(../images/m-icon08.png) left center no-repeat;}
+.theinput .inptext ol.fh2{ left:265px; line-height:42px; width:46px;}
+
+
+.mainbox .submitbon{ padding:10px 10px 15px 10px;}
+.submitbon .marbom{ margin-bottom:12px;}
+.submitbon a{ display:block; height:46px; line-height:46px; width:100%; text-align:center; margin:0 auto; font-size:20px; color:#fff; border-radius:6px; text-shadow:0 0 6px rgba(0,0,0,0.5)}
+.submitbon a.confirm{ background-color:#45b035; box-shadow:0 2px 0 #0b5500;}
+.submitbon a.reset{ background-color:#646d68; box-shadow:0 2px 0 #333;}
+.submitbon a.later{ background-color:#4394d0; box-shadow:0 2px 0 #08385b;}
+.submitbon a.upload{ background-color:#a3a3a3;}
+.submitbon a:active{ box-shadow:0 1px 5px rgba(0,0,0,0.7) inset;}
+.submitbon h2{ font-size:16px; text-align:center; line-height:1.5em; letter-spacing:1px; margin-bottom:10px;}
+.submitbon h2 strong{ color:#45b035;}
+.submitbon h3{ font-size:14px; text-align:center; line-height:1.5em; margin:0 auto 15px auto; width:264px; text-align:right; position:relative; text-indent:24px;}
+.submitbon h3 dl{ width:20px; height:20px; position:absolute; left:0px; top:1px;}
+.submitbon h3 cite{ color:#057ce0;}
+.submitbon .checkinp{ width:16px; height:16px; border:2px solid #646d68; position:relative;}
+.submitbon .checkinp input[type=checkbox]{ -webkit-appearance:none; -moz-appearance:none; border:0 none; width:16px; height:16px; position:absolute; top:0; left:0; background-color:#fff; cursor:pointer;}
+.submitbon .checkinp label{ width:16px; height:16px; position:absolute; top:0; left:0; background:url(../images/m-icon03.png) center center no-repeat;}
+.submitbon .checkinp input[type=checkbox]:checked{ opacity:0;}
+.submitbon .lefrig a{ width:49%; float:right;}
+.submitbon .lefrig a:first-child{ float:left;}
+.mainbox .submnobk{ padding:15px 5px; border:0 none; border-radius:0;}
+
+.mainbox section.cenlogo{ padding:20px 0;}
+.cenlogo img{ margin:0 auto;}
+
+/* 车辆监控 */
+.carList li{ height:auto; color:#646d68;}
+.carList li:first-child{ margin-bottom:5px;}
+.carList li span.No{ color:#090909;}
+.carList li span.name{ margin:0 12px;}
+.carList li span.state{ float:right; padding-right:12px;}
+.arrowR{ width:8px; height:13px; background:url(../images/m-arrowR.png) no-repeat center; position:absolute; top:17px; right:2px;}
+.carList li p.time{ font-size:13px;}
+.carList li p.num{ font-size:14px;}
+.carList li p span.spe{padding:0 8px;}
+.blue{ color:#4394d0; font-size:15px; font-weight:bold; padding:0 3px;}
+.green{ color:#45b035; font-size:15px; font-weight:bold; padding:0 3px;}
+.red{ color:#d55601; font-size:15px;padding:0 3px;}
+.carState{ width:90px; height:28px; line-height:28px; text-align:center; border-style:solid; border-width:1px; border-radius:4px; background:#fff; font-size:12px;position:absolute; top:15px; right:0;}
+.stateBlue{ color:#4394d0; border-color:#4394d0;}
+.stateRed{ color:#ff5a00; border-color:#ff5a00;}
+.stateGreen{ color:#45b035; border-color:#45b035;}
+.statePurple{ width:115px; color:#da00fb; border-color:#da00fb;}
+.btngreen{ width:99px; height:30px; line-height:30px;text-align:center; background:#45b035; color:#fff;border-radius:15px; font-size:15px;position:absolute; top:15px; right:3px;}
+.btngray{width:99px; height:30px; line-height:30px;text-align:center; background:#edf0f1; color:#646d68;border-radius:15px; font-size:15px;position:absolute; top:15px; right:3px;}
+.btnblue{width:99px; height:30px; line-height:30px;text-align:center; background:#4394d0; color:#fff;border-radius:15px; font-size:15px;position:absolute; top:15px; right:3px;}
+
+/* 响应任务 */
+.score{ width:55px;}
+.score i{ font-style:normal; font-size:10px; padding-left:4px;}
+.f13{ font-size:14px;}

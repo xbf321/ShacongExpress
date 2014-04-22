@@ -1,0 +1,9 @@
+/packages
+/ShacongExpress.Core/obj
+/ShacongExpress.Core/bin
+/ShacongExpress.Web.WX/bin
+/ShacongExpress.Web.WX/obj
+/ShacongExpress.Web.WX/packages.config
+/ShacongExpress.Web.WX/log
+/WXFramework/bin
+/WXFramework/obj
