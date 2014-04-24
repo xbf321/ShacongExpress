@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_EmptyLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+@section header{
+    <style type="text/css">
+		.member { width: 200px;float: left;border: 1px solid #CCCCCC;margin: 0 10px; }
+		.title { border-bottom: 2px solid #45B035; }
+	</style>
+}
+<div>
+    本页面中没有页面链接的是目前缺少的页面，以！开头的页面是临时用现有页面修改的<br />
+    一般在列表页面（eg.响应任务）中的第一条也可点击查看跳转</div>
+<div class="member">
+    <h3 class="title">
+        货主</h3>
+    <div class="sub-title">
+        信息发布</div>
+    <ul>
+        <li><a href="2货主发布需求（物流平台-货主发布需求）.html" target="_blank">发布新需求</a></li>
+    </ul>
+    <div class="sub-title">
+        任务处理</div>
+    <ul>
+        <li><a href="3响应任务（物流平台-等待响应选择承运）.html" target="_blank">待确认需求</a></li>
+        <li><a href="4任务监控（货主任务监控）.html" target="_blank">任务监控</a></li>
+        <li><a href="!历史任务（货主历史任务）.html" target="_blank">！历史任务</a></li>
+    </ul>
+    <div class="sub-title">
+        附加服务</div>
+    <ul>
+        <li><a href="/passport/shipper/register" target="_blank">在线注册</a></li>
+        <li>修改资料</li>
+        <li>我的客户</li>
+    </ul>
+</div>
+<div class="member">
+    <h3 class="title">
+        车队/司机</h3>
+    <div class="sub-title">
+        车辆管理</div>
+    <ul>
+        <li><a href="5车队任务监控（车队车辆监控）.html" target="_blank">车辆状态</a></li>
+        <li><a href="!结算管理.html" target="_blank">！结算管理</a></li>
+    </ul>
+    <div class="sub-title">
+        任务处理</div>
+    <ul>
+        <li><a href="3响应任务（物流平台-响应任务1）.html" target="_blank">响应任务</a>
+            <ul>
+                <li><a href="3响应任务（物流平台-派送任务1）.html" target="_blank">派送</a></li>
+            </ul>
+        </li>
+        <li><a href="5车队任务监控（车队任务监控）.html" target="_blank">任务监控</a></li>
+        <li><a href="!历史任务（车队历史任务）.html" target="_blank">！历史任务</a></li>
+    </ul>
+    <div class="sub-title">
+        附加服务</div>
+    <ul>
+        <li><a href="!1车队注册（01车队注册）.html" target="_blank">！在线注册</a></li>
+        <li><a href="!车辆信息维护.html" target="_blank">！维护车辆信息</a></li>
+        <li>我的客户</li>
+    </ul>
+</div>

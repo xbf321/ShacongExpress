@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "_EmptyLayout.cshtml";
+}
+@section header{
+    @RenderSection("header", false)
+}
+@section footer{
+    @RenderSection("footer", false)
+}
+<!--header-->
+<header class="header">
+	@ViewBag.HeaderTitle
+	<div class="return">返回</div>
+	<div class="rigcor"></div>	
+</header>
+<div class="mainbox">
+    @RenderBody()
+</div>

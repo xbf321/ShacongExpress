@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "货主认证";
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+}
+<form method="post">
+<!--middle of the content-->
+<section class="theinput">
+		<ul>
+			<li>				
+				<input type="text" class="tex01" name="txtCompanyAddress" />
+				<h1>企业地址</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex01" name="txtZip" />
+				<h1>邮　　编</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex03" />
+				<h1>营业执照住所地</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex03" />
+				<h1>营业执照注册号</h1>
+				<dl>上传营业执照</dl>
+			</li>
+			<li>				
+				<input type="text" class="tex01" />
+				<h1>经营范围</h1>
+			</li>	
+			<li>				
+				<input type="text" class="tex01" />
+				<h1>注册资本</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex03" />
+				<h1>组织机构代码</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex03" />
+				<h1>法定代表人姓名</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex03" />
+				<h1>运营负责人姓名</h1>
+				<dl>上传运营授权书</dl>
+			</li>
+			<li>				
+				<input type="text" class="tex03" />
+				<h1>运营负责人职务</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex04" />
+				<h1>运营者身份证号码</h1>
+				<dl>上传身份证扫描件</dl>
+			</li>
+		</ul>
+	</section>
+<!--The button-->
+<section class="submitbon">
+		<h3>
+			<dl><div class="checkinp"><label></label><input type="checkbox"></div></dl>
+			我已阅读并同意<cite>《沙葱快运服务协议》</cite>
+		</h3>
+        <button type="submit" class="confirm marbom">我是货主，确认认证</button>
+		<a href="##" class="later">稍后到网页认证</a>
+	</section>
+</form>

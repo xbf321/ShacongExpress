@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ShacongExpress.Web.WX.Controllers
+namespace ShacongExpress.Web.WX.Areas.Shipper.Controllers
 {
-    public class HomeController : Controller
+    public class TaskController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /Shipper/Task/
 
-        public ActionResult Index()
+        public ActionResult Public()
         {
             return View();
         }

@@ -7,3 +7,4 @@
 /ShacongExpress.Web.WX/log
 /WXFramework/bin
 /WXFramework/obj
+/ShacongExpress.Web.Controllers/obj/Debug/*.cache

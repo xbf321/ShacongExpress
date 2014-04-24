@@ -13,6 +13,25 @@ namespace ShacongExpress.Web.WX
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            /*
+             passport/shipper/register
+            passport/shipper/register_success
+            passport/shipper/auth
+            passport/shipper/auth_success
+
+            passport/motorcade/register
+            passport/motorcade/register_success
+            passport/motorcade/auth
+            passport/motorcade/auth_success
+             */
+
+            //微信接口
+            routes.MapRoute(
+                name: "Weixin",
+                url: "wx/{action}",
+                defaults: new { controller = "WX", action = "Index"}
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

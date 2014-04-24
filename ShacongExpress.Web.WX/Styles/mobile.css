@@ -36,7 +36,7 @@ a:hover,a:active,a:focus{text-decoration:none;}
 .mainbox section{ border:1px solid #ccc; border-radius:4px; padding:5px; background-color:#fff; margin-bottom:10px;}
 .theinput li{ height:40px; border-top:1px solid #ddd; padding:10px 10px 0 5px; margin-bottom:10px; position:relative; font-size:16px;}
 .theinput li:first-child{ border-top:0 none;}
-.theinput li input[type=text]{ display:block; height:36px; line-height:36px; color:#008346; border:2px solid #ecf0f1; background-color:#ecf0f1; border-radius:4px; width:100%; margin:0 auto;}
+.theinput li input[type=text],.theinput li input[type=password]{ display:block; height:36px; line-height:36px; color:#008346; border:2px solid #ecf0f1; background-color:#ecf0f1; border-radius:4px; width:100%; margin:0 auto;}
 .theinput li input.tex01{ text-indent:76px;}
 .theinput li input.tex02{ text-indent:110px;}
 .theinput li input.tex03{ text-indent:124px;}
@@ -119,3 +119,10 @@ a:hover,a:active,a:focus{text-decoration:none;}
 .score{ width:55px;}
 .score i{ font-style:normal; font-size:10px; padding-left:4px;}
 .f13{ font-size:14px;}
+
+/* button */
+button{ display:block; height:46px; line-height:46px; width:100%; text-align:center; margin:0 auto; font-size:20px; color:#fff; border-radius:6px; text-shadow:0 0 6px rgba(0,0,0,0.5)}
+button.confirm{ background-color:#45b035; box-shadow:0 2px 0 #0b5500;}
+button.reset{ background-color:#646d68; box-shadow:0 2px 0 #333;}
+button.later{ background-color:#4394d0; box-shadow:0 2px 0 #08385b;}
+button.upload{ background-color:#a3a3a3;}

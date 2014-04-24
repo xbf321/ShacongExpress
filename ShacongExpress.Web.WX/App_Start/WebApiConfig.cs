@@ -12,7 +12,7 @@ namespace ShacongExpress.Web.WX
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new { id = RouteParameter.Optional,controller="WX" }
             );
         }
     }

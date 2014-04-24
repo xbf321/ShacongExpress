@@ -45,9 +45,6 @@
       <HintPath>..\Assemblies\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="ShacongExpress.Core">
-      <HintPath>..\ShacongExpress.Core\bin\Debug\ShacongExpress.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -116,6 +113,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Passport\Controllers\ShipperController.cs" />
+    <Compile Include="Areas\Passport\PassportAreaRegistration.cs" />
+    <Compile Include="Areas\Shipper\Controllers\TaskController.cs" />
+    <Compile Include="Areas\Shipper\ShipperAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -150,9 +151,47 @@
     </Content>
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="Areas\Passport\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Passport\Views\Motorcade\" />
+    <Folder Include="Areas\Passport\Views\Shared\" />
+    <Folder Include="Areas\Shipper\Models\" />
+    <Folder Include="Areas\Shipper\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_EmptyLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_CommonLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Passport\Views\Shipper\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Passport\Views\Shipper\Register_Success.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Passport\Views\Shipper\Auth.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Passport\Views\Shipper\Auth_Success.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShacongExpress.Core\ShacongExpress.Core.csproj">
+      <Project>{9B94B4BD-6615-4A34-AD54-184911ABA4DB}</Project>
+      <Name>ShacongExpress.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Shipper\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Shipper\Views\Task\Public.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

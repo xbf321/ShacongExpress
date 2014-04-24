@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+
+    ViewBag.HeaderTitle = "货车司机";
+}
+<form method="post">
+<!--middle of the content-->
+<section class="theinput">
+		<ul>
+			<li>				
+				<input type="text" class="tex01" name="txtUserName" />
+				<h1>　用户名</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex01" name="txtCompanyName" />
+				<h1>公司名称</h1>
+			</li>
+			<li>				
+				<input type="password" class="tex01" name="txtUserPassword" />
+				<h1>密　　码</h1>
+			</li>
+			<li>				
+				<input type="password" class="tex01" name="txtConfirmUserPassword" />
+				<h1>确认密码</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex01" name="txtMobile" />
+				<h1>手机号码</h1>
+			</li>	
+			<li>				
+				<input type="text" class="tex02" />
+				<h1>请输入验证码</h1>
+				<dl>发送验证码</dl>
+			</li>					
+		</ul>
+	</section>
+<!--The button-->
+<section class="submitbon">
+        <button type="submit" class="confirm marbom">我是货主，确认注册</button>
+        <button type="reset" class="reset">重 置</button>
+</section>
+</form>

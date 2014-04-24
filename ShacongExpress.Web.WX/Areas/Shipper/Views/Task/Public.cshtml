@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "发布运输需求";
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+}
+<!--content1-->
+<section class="theinput">
+		<ul>
+			<li>				
+				<input type="text" class="tex01" />
+				<h1>货物名称</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex02" />
+				<h1>货物数量(吨)</h1>
+			</li>
+		</ul>
+	</section>
+<!--content2-->
+<section class="theinput">
+		<ul>
+			<li>				
+				<input type="text" class="tex01" />
+				<h1>起始地</h1>
+				<em class="start">起</em>
+			</li>
+			<li>				
+				<input type="text" class="tex01" />
+				<h1>目的地</h1>
+				<em class="end">终</em>
+			</li>
+			<li>				
+				<input type="text" class="tex01" />
+				<h1>仓储地</h1>
+			</li>
+		</ul>
+	</section>
+<!--content3-->
+<section class="theinput">
+		<ul>
+			<li>				
+				<input type="text" class="tex02" />
+				<h1>发运开始日期</h1>
+				<em class="time"></em>
+			</li>
+			<li>				
+				<input type="text" class="tex02" />
+				<h1>发运结束日期</h1>
+				<em class="time"></em>
+			</li>
+		</ul>
+	</section>
+<!--content4-->
+<section class="theinput">
+		<ul>
+			<li>				
+				<input type="text" class="tex02" />
+				<h1>运费（元/吨）</h1>
+			</li>
+			<li id="switch" class="switch">
+				<h1>是否可议价</h1>
+				<strong></strong>
+			</li>
+			<li>
+				<select name="scope">
+					<option value="scope01">信息发布范围选择</option>
+					<option value="scope02">范围01</option>
+					<option value="scope03">范围02</option>
+					<option value="scope04">范围03</option>
+				</select>
+			</li>
+			<li>				
+				<div class="inptext">					
+					<ol class="sr1"><input type="text" /></ol>					
+					<ol class="jt1"></ol>
+					<ol class="fh1">%&nbsp;—&nbsp;</ol>
+					<ol class="sr2"><input type="text" /></ol>					
+					<ol class="jt2"></ol>
+					<ol class="fh2">%</ol>
+				</div>
+				<h1>正常损耗（涨亏）</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex05" />
+				<h1>超出正常损耗赔偿（元/吨）</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex01" />
+				<h1>特殊需求</h1>
+			</li>
+			<li>				
+				<input type="text" class="tex02" />
+				<h1>查看运输合同</h1>
+				<em class="arrow"></em>
+			</li>
+		</ul>
+		<script type="text/javascript">
+		    $('#switch strong').on('tap', function () {
+		        if ($(this).hasClass('on')) { $(this).removeClass('on') }
+		        else { $(this).addClass('on') };
+		    })
+		</script>
+		<!--upload imgs-->
+		<section class="submitbon submnobk">
+			<a href="##" class="upload">上传货物相片</a>
+		</section>
+		<!--upload imgs end-->
+	</section>
+<!--The button-->
+<section class="submitbon">
+		<a href="##" class="confirm marbom">我是货主，确认收货</a>
+		<a href="##" class="reset">重 置</a>
+	</section>
