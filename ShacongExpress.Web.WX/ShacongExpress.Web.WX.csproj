@@ -113,6 +113,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\PagesAdmin\Controllers\UserController.cs" />
+    <Compile Include="Areas\PagesAdmin\PagesAdminAreaRegistration.cs" />
     <Compile Include="Areas\Passport\Controllers\ShipperController.cs" />
     <Compile Include="Areas\Passport\PassportAreaRegistration.cs" />
     <Compile Include="Areas\Shipper\Controllers\TaskController.cs" />
@@ -127,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Styles\mobile.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\m-arrowR.png" />
@@ -142,6 +145,7 @@
     <Content Include="Images\m-logo.png" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.mobile-1.4.2.min.js" />
+    <Content Include="Styles\validate.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -155,6 +159,7 @@
     <Content Include="Areas\Passport\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\PagesAdmin\Models\" />
     <Folder Include="Areas\Passport\Views\Motorcade\" />
     <Folder Include="Areas\Passport\Views\Shared\" />
     <Folder Include="Areas\Shipper\Models\" />
@@ -192,6 +197,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Shipper\Views\Task\Public.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\PagesAdmin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\PagesAdmin\Views\Shared\_PagesAdminLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\PagesAdmin\Views\User\BaseInfoList.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

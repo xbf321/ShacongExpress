@@ -26,6 +26,11 @@ namespace ShacongExpress.Web.WX.Areas.Passport.Controllers
             var companyName = fc["txtCompanyName"];
             var mobile = fc["txtMobile"];
 
+            if(UserService.ValidateUserName(userName)){
+                ViewBag.Msg = "用户名已存在！";
+                return View();
+            }
+
             var userModel = new UserInfo() { 
                 UserName = userName,
                 UserPassword = userPassword,

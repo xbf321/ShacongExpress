@@ -4,28 +4,31 @@
 
     ViewBag.HeaderTitle = "货车司机";
 }
-<form method="post">
+<form method="post" id="form">
 <!--middle of the content-->
+@if(!string.IsNullOrEmpty(ViewBag.Msg)){
+    <text>@ViewBag.Msg</text>
+}
 <section class="theinput">
 		<ul>
 			<li>				
-				<input type="text" class="tex01" name="txtUserName" />
+				<input type="text" class="tex01" name="txtUserName" id="txtUserName" />
 				<h1>　用户名</h1>
 			</li>
 			<li>				
-				<input type="text" class="tex01" name="txtCompanyName" />
+				<input type="text" class="tex01" name="txtCompanyName" id="txtCompanyName" />
 				<h1>公司名称</h1>
 			</li>
 			<li>				
-				<input type="password" class="tex01" name="txtUserPassword" />
+				<input type="password" class="tex01" name="txtUserPassword" id="txtUserPassword" />
 				<h1>密　　码</h1>
 			</li>
 			<li>				
-				<input type="password" class="tex01" name="txtConfirmUserPassword" />
+				<input type="password" class="tex01" name="txtConfirmUserPassword" id="txtConfirmUserPassword"/>
 				<h1>确认密码</h1>
 			</li>
 			<li>				
-				<input type="text" class="tex01" name="txtMobile" />
+				<input type="text" class="tex01" name="txtMobile" id="txtMobile"/>
 				<h1>手机号码</h1>
 			</li>	
 			<li>				
@@ -41,3 +44,46 @@
         <button type="reset" class="reset">重 置</button>
 </section>
 </form>
+@section footer{
+    <script type="text/javascript">
+        $(function () {
+            $("#form").validate({
+                rules: {
+                    txtUserName: {
+                        required: true,
+                        minlength: 2
+                    },
+                    txtUserPassword: {
+                        required: true,
+                        minlength: 5
+                    },
+                    txtConfirmUserPassword: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#txtUserPassword"
+                    },
+                    txtCompanyName: {
+                        required: true,
+                        minlength: 5
+                    }
+                },
+                messages: {
+                    txtUserName: {
+                        required: "Please enter a username",
+                        minlength: "Your username must consist of at least 2 characters"
+                    },
+                    txtUserPassword: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    txtConfirmUserPasswords: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long",
+                        equalTo: "Please enter the same password as above"
+                    },
+                    txtCompanyName: "*"
+                }
+            });
+        });
+    </script>
+}

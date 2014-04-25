@@ -1,0 +1,11 @@
+﻿input {	border: 1px solid black; }
+input.checkbox { border: none }
+input:focus { border: 1px dotted black; }
+input.error { border: 1px dotted red;color:Red; }
+label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	margin-left: 253px;
+	color:Red;
+}

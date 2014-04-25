@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 
 
 using ShacongExpress.Models;
+using ShacongExpress.Common;
+using System.Collections.Generic;
 
 namespace ShacongExpress.Data
 {
@@ -28,6 +30,14 @@ namespace ShacongExpress.Data
             parms[5].Value = model.Mobile;
 
             return Convert.ToInt32(Goodspeed.Library.Data.SQLPlus.ExecuteScalar(CommandType.Text, strSQL, parms));
+        }
+        #endregion
+
+        #region == 
+        public static bool ValidateUserName(string userName) {
+            string strSQL = "SELECT COUNT(*) FROM Users WITH(NOLOCK) WHERE UserName = @UserName";
+            SqlParameter parm = new SqlParameter("UserName",userName);
+            return Convert.ToInt32(Goodspeed.Library.Data.SQLPlus.ExecuteScalar(CommandType.Text,strSQL,parm)) > 0;
         }
         #endregion
 
@@ -83,5 +93,61 @@ namespace ShacongExpress.Data
             return Convert.ToInt32(Goodspeed.Library.Data.SQLPlus.ExecuteNonQuery(CommandType.Text,strSQL,parms)) > 0 ;
         }
         #endregion
+
+        #region
+        /// <summary>
+        /// 用户基本列表
+        /// </summary>
+        /// <param name="setting"></param>
+        /// <returns></returns>
+        public static IPageOfList<UserInfo> BaseInfoList(SearchSetting setting)
+        {
+            FastPaging fp = new FastPaging();
+            fp.PageIndex = setting.PageIndex;
+            fp.PageSize = setting.PageSize;
+            fp.Ascending = false;
+            fp.TableName = "Users";
+            fp.TableReName = "p";
+            fp.PrimaryKey = "ID";
+            fp.QueryFields = "p.*";
+            fp.OverOrderBy = " CreateDateTime DESC";
+            fp.WithOptions = " WITH(NOLOCK)";
+
+            IList<UserInfo> list = new List<UserInfo>();
+            DataTable dt = Goodspeed.Library.Data.SQLPlus.ExecuteDataTable(CommandType.Text, fp.Build2005());
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    list.Add(GetByRow(dr));
+                }
+            }
+
+            int count = Convert.ToInt32(Goodspeed.Library.Data.SQLPlus.ExecuteScalar(CommandType.Text, fp.BuildCountSQL())); ;
+            return new PageOfList<UserInfo>(list, setting.PageIndex, setting.PageSize, count);
+        }
+        #endregion
+
+        /// <summary>
+        /// 填充用户详细信息
+        /// </summary>
+        /// <param name="dr"></param>
+        /// <returns></returns>
+        private static UserInfo GetByRow(DataRow dr)
+        {
+            if (dr == null) { return new UserInfo(); }
+            return new UserInfo()
+            {
+                Id = dr.Field<int>("Id"),
+                UserName = dr.Field<string>("UserName"),
+                UserPassword = dr.Field<string>("UserPassword"),
+                CreateDateTime = dr.Field<DateTime>("CreateDateTime"),
+                Mobile = dr.Field<string>("Mobile"),
+                CompanyName = dr.Field<string>("CompanyName"),
+                OpenId = dr.Field<string>("OpenId"),
+                UserType = (UserType)Enum.Parse(typeof(UserType),dr.Field<Int16>("UserType").ToString()),
+                Status = dr.Field<bool>("Status")
+            };
+        }
     }
 }

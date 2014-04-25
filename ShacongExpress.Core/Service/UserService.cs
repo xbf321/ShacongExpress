@@ -24,6 +24,9 @@ namespace ShacongExpress.Service
             }
             return model;
         }
+        public static bool ValidateUserName(string userName) {
+            return UserManage.ValidateUserName(userName);
+        }
         /// <summary>
         /// 货主认证
         /// </summary>
@@ -31,6 +34,15 @@ namespace ShacongExpress.Service
         /// <returns></returns>
         public static bool AuthShipper(ShipperInfo model) {
             return UserManage.UpdateShipper(model);
+        }
+
+        /// 列表
+        /// </summary>
+        /// <param name="setting"></param>
+        /// <returns></returns>
+        public static IPageOfList<UserInfo> BaseInfoList(SearchSetting setting)
+        {
+            return UserManage.BaseInfoList(setting);
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_EmptyLayout.cshtml";
+}
+@section header{
+    <style type="text/css">
+        .tblist{border:1px solid #ddd; border-collapse:collapse;}
+        .tblist .tdcenter{text-align:center;}
+        .tblist tr th{background:#f8f8f8;line-height:30px;border-bottom:1px solid #ddd;padding:0 15px;border-left:1px solid #ddd;}
+        .tblist tr td{background:#fff;line-height:25px;border-bottom:1px solid #ddd;padding:0 15px;border-left:1px solid #ddd;}
+        .tblist tr.odd td{background:#fbfbfb;}
+        .tblist tr:hover td{background:#fdfcf6;}
+        .tblist .action{text-align:right;padding:0 20px 0 10px;}
+        .tblist tr .action a{text-decoration:none;color:#9b9b9b;margin:0 0 0 10px;}
+        .tblist tr:hover .action .edit{color:#c5a059;}
+        .tblist tr:hover .action .delete{color:#a02b2b;}
+        .tblist tr:hover .action .view{color:#55a34a;}
+        .tblist tr:hover .action a:hover{text-decoration:underline;}
+        /*PageBar*/
+        .pagebar{float:right;}
+        .pagebar span{color:#565859; margin-right:12px;}
+        .pagerbar{padding:10px;}
+        .pagerbar span{ margin-right:10px;}
+        fieldset{padding:5px;margin:10px;}
+    </style>
+    @RenderSection("header",false)
+}
+@section footer{
+    @RenderSection("footer",false)
+}
+@RenderBody()
